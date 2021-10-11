@@ -5,13 +5,15 @@
 }
 
 section {
-    padding: 70px 0;
+    padding: 50px 0;
     margin: 0px auto;
+    background-color: white;
 }
 
 h1 {
     font-weight: 400;
     font-size: 50px;
+    margin-top: 0;
 }
 
 h2 {
@@ -30,7 +32,15 @@ h4 {
     font-weight: 500;
     font-size: 35px;
     color: white;
-    text-shadow: 0 0 50px #000000, 0 0 50px #000000, 0 0 50px #000000, 0 0 50px #000000;
+    text-shadow: 
+        -1px -1px 33px #000,
+        0px -1px 33px #000,
+        1px -1px 33px #000,
+        -1px  0px 33px #000,
+        1px  0px 33px #000,
+        -1px  1px 33px #000,
+        0px  1px 33px #000,
+        1px  1px 33px #000,
 }
 
 span {

@@ -243,13 +243,15 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 section {
-  padding: 70px 0;
+  padding: 50px 0;
   margin: 0px auto;
+  background-color: white;
 }
 
 h1 {
   font-weight: 400;
   font-size: 50px;
+  margin-top: 0;
 }
 
 h2 {
@@ -268,7 +270,7 @@ h4 {
   font-weight: 500;
   font-size: 35px;
   color: white;
-  text-shadow: 0 0 50px #000000, 0 0 50px #000000, 0 0 50px #000000, 0 0 50px #000000;
+  text-shadow: -1px -1px 33px #000, 0px -1px 33px #000, 1px -1px 33px #000, -1px 0px 33px #000, 1px 0px 33px #000, -1px 1px 33px #000, 0px 1px 33px #000, 1px 1px 33px #000;
 }
 
 span {
@@ -308,6 +310,7 @@ body {
 
 .main-header .header .text-header h1 {
   margin-top: 0;
+  font-weight: 400;
 }
 
 .main-header .header .text-header span {
@@ -327,12 +330,12 @@ body {
   text-align: center;
 }
 
-section {
-  background-color: white;
+#categories {
+  background-color: #f0f0f0;
 }
 
-section .flex {
-  width: 70%;
+#categories .flex {
+  width: 80%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -340,7 +343,7 @@ section .flex {
   margin-right: auto;
 }
 
-section .flex .item {
+#categories .flex .item {
   flex-basis: 24%;
   height: 300px;
   background-size: cover;
@@ -351,47 +354,47 @@ section .flex .item {
   transition: all 0.3s;
 }
 
-section .flex .item:visited {
+#categories .flex .item:visited {
   color: white;
 }
 
-section .flex .item:hover {
+#categories .flex .item:hover {
   opacity: 0.8;
 }
 
-section .flex .item1 {
+#categories .flex .item1 {
   background-image: url("../img/guitar.jpg");
 }
 
-section .flex .item2 {
+#categories .flex .item2 {
   background-image: url("../img/bass.jpg");
 }
 
-section .flex .item3 {
+#categories .flex .item3 {
   background-image: url("../img/keyboard.jpg");
 }
 
-section .flex .item4 {
+#categories .flex .item4 {
   background-image: url("../img/drums.jpg");
 }
 
-section .flex .item5 {
+#categories .flex .item5 {
   background-image: url("../img/console.jpg");
 }
 
-section .flex .item6 {
+#categories .flex .item6 {
   background-image: url("../img/light.jpg");
 }
 
-section .flex .item7 {
+#categories .flex .item7 {
   background-image: url("../img/amp.jpg");
 }
 
-section .flex .item8 {
+#categories .flex .item8 {
   background-image: url("../img/microphone.jpg");
 }
 
-section .flex .title {
+#categories .flex .title {
   width: 100%;
   height: 100%;
   display: flex;
@@ -399,9 +402,13 @@ section .flex .title {
   justify-content: center;
 }
 
+.article-header h1 {
+  padding-top: 30px;
+}
+
 .post-container {
   width: 100%;
-  padding: 0;
+  padding: 30px 0;
   background-color: white;
 }
 
@@ -409,11 +416,98 @@ section .flex .title {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  padding: 30px 0;
+  padding: 0;
 }
 
 .post-container .post .content {
-  padding: 30px 0;
+  padding: 30px 0 0 0;
+}
+
+.post-container .post .content ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 10px;
+}
+
+#latest-posts {
+  padding-bottom: 0;
+}
+
+#latest-posts h1 {
+  text-align: center;
+}
+
+#contact {
+  background-color: #f0f0f0;
+}
+
+#contact .contact {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+footer {
+  background-color: #f0f0f0;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding-bottom: 50px;
+  width: 100%;
+}
+
+footer .socjal {
+  width: 217px;
+  margin: 10px;
+  height: 142px;
+}
+
+footer .socjal a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+footer .socjal .socjallink {
+  color: white;
+  font-size: 50px;
+}
+
+footer .yt {
+  background-color: #b94348;
+}
+
+footer .yt:hover {
+  background-color: #a83237;
+}
+
+footer .fb {
+  background-color: #4668b3;
+}
+
+footer .fb:hover {
+  background-color: #3557a2;
+}
+
+footer .gplus {
+  background-color: #d95333;
+}
+
+footer .gplus:hover {
+  background-color: #c84222;
+}
+
+footer .tw {
+  background-color: #3095d3;
+}
+
+footer .tw:hover {
+  background-color: #2084c2;
 }
 
 /*  %btn {
