@@ -36,6 +36,14 @@ body {
             }
         }
     }
+
+    @media all and (max-width: $small) {
+        .header {
+            padding-left: 0;
+            padding-right: 0;
+
+        }
+    }
 }
 
 .article-header {
@@ -48,5 +56,5 @@ body {
         margin-left: auto;
         margin-right: auto;
         text-align: center;
-    }
+    }  
 }

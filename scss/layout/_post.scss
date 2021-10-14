@@ -25,4 +25,11 @@
             }
         }
     }
+
+    @media all and (max-width: $small) {
+        .post {
+            width: 95%;
+        }
+    }
 }
+
