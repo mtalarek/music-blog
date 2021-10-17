@@ -73,8 +73,12 @@
         .flex {
             width: 95%;
 
-            h4 {
-                font-size: 20px;
+            .item {
+                flex-basis: 49%;
+
+                h4 {
+                    font-size: 20px;
+                }
             }
         }
     }
@@ -84,7 +88,7 @@
             width: 95%;
 
             .item {
-                flex-basis: 49%;
+                flex-basis: 100%;
             }
         }
     }

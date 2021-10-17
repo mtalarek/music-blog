@@ -1,4 +1,4 @@
-/* Wersja obiektowa - robocza */
+/* Slider - wersja obiektowa - robocza */
 
 /* class Slider {
     constructor(images) {
@@ -46,13 +46,16 @@ slider.onclickSlide();
 console.log(document.getElementsByClassName("slide")); */
 
 
-/* Wersja 2 - gotowa */
+/* Slider -wersja 2 - gotowa */
 
-const imageArr = [
-    'img/ibanez-prestige.jpg',
-    'img/ibanez-prestige1.jpg',
-    'img/ibanez-prestige3.jpg',
-    'img/ibanez-prestige4.jpg',
+/* Ibanez Prestige */
+
+const IbanezPrestige = [
+    "url('img/ibanez-prestige.jpg')",
+    "url('img/ibanez-prestige1.jpg')",
+    "url('img/ibanez-prestige2.jpg')",
+    "url('img/ibanez-prestige3.jpg')",
+    "url('img/ibanez-prestige4.jpg')",
 ];
 
 let slide = document.getElementById("slider ibanez");      
@@ -60,12 +63,12 @@ let prevBtn = document.getElementById("slider-button prev");
 let nextBtn = document.getElementById("slider-button next");
 
 prevBtn.classList.add("unactive");
-slide.src = imageArr[0];
+slide.style.backgroundImage = IbanezPrestige[0];
 let i = 0;
 
 slideLeft = () => {
     i--;
-    slide.src = imageArr[i];
+    slide.style.backgroundImage = IbanezPrestige[i];
     nextBtn.classList.remove("unactive");
     if (i === 0) {
         prevBtn.classList.add("unactive");
@@ -74,10 +77,49 @@ slideLeft = () => {
     slideRight = () => {
     i++;
     prevBtn.classList.remove("unactive");
-    slide.src = imageArr[i];
-    if (i === imageArr.length - 1) {
+    slide.style.backgroundImage = IbanezPrestige[i];
+    if (i === IbanezPrestige.length - 1) {
         nextBtn.classList.add("unactive");
     }};
 
 prevBtn.addEventListener("click", slideLeft);
 nextBtn.addEventListener("click", slideRight);
+
+
+
+/* Fender Strat USA */
+
+const FenderStratUSA = [
+    "url('img/fender-strat.jpg')",
+    "url('img/fender-strat1.jpg')",
+    "url('img/fender-strat2.jpg')",
+    "url('img/fender-strat3.jpg')",
+    "url('img/fender-strat4.jpg')",
+];
+
+let slideFenderStrat = document.getElementById("slider fender-strat");      
+let prevBtnFenderStrat = document.getElementById("slider-button prev fender-strat");
+let nextBtnFenderStrat = document.getElementById("slider-button next fender-strat");
+
+prevBtnFenderStrat.classList.add("unactive");
+slideFenderStrat.style.backgroundImage = FenderStratUSA[0];
+let iFenderStrat = 0;
+
+slideLeft = () => {
+    i--;
+    slideFenderStrat.style.backgroundImage = FenderStratUSA[i];
+    nextBtnFenderStrat.classList.remove("unactive");
+    if (i === 0) {
+        prevBtnFenderStrat.classList.add("unactive");
+    }};
+
+    slideRight = () => {
+    i++;
+    prevBtnFenderStrat.classList.remove("unactive");
+    slideFenderStrat.style.backgroundImage = FenderStratUSA[i];
+    if (i === FenderStratUSA.length - 1) {
+        nextBtnFenderStrat.classList.add("unactive");
+    }};
+
+prevBtnFenderStrat.addEventListener("click", slideLeft);
+nextBtnFenderStrat.addEventListener("click", slideRight);
