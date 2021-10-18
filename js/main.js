@@ -1,8 +1,11 @@
-/* Slider - wersja obiektowa - robocza */
+/* Slider - wersja obiektowa */
 
-/* class Slider {
-    constructor(images) {
+class Slider {
+    constructor(images, id) {
         this.images = images;
+        this.idSlide = id;
+        this.idPrevBtn = "slider-button prev "+ id;
+        this.idNextBtn = "slider-button next "+ id;
         this.slide = null;
         this.prevBtn = null;
         this.nextBtn = null;
@@ -11,46 +14,73 @@
     }
 
     initializeSlider() {
-        this.slide = document.getElementById("slider fender");
+        this.slide = document.getElementById(this.idSlide);
+        this.prevBtn = document.getElementById(this.idPrevBtn);
+        this.nextBtn = document.getElementById(this.idNextBtn);
         
-        this.prevBtn = document.getElementById("slider-button prev");
-        this.nextBtn = document.getElementById("slider-button next");
-        
-        this.image = document.createElement('img');
-        this.image.setAttribute('src', this.images[this.currentSlide]);
-
-        this.slide.appendChild(this.image);
-        this.onclickSlide();
+        this.prevBtn.classList.add("unactive");
+        this.slide.style.backgroundImage = this.images[0];
+        this.onclickSlide(); 
     }
 
-    
     onclickSlide() {
-        this.prevBtn.addEventListener('click', () => this.changeNumber(this.currentSlide - 1),);
-        
-        this.nextBtn.addEventListener('click', () => this.changeNumber(this.currentSlide + 1),);
+        this.prevBtn.addEventListener('click', () => this.slideLeft(this.currentSlide - 1),);
+        this.nextBtn.addEventListener('click', () => this.slideRight(this.currentSlide + 1),);
     }
 
-    changeNumber(index) {
-        this.currentSlide = index;
-    }
-}
+    slideLeft = () => {
+        this.currentSlide--;
+        this.slide.style.backgroundImage = this.images[this.currentSlide];
+        this.nextBtn.classList.remove("unactive");
+        if (this.currentSlide === 0) {
+            this.prevBtn.classList.add("unactive");
+        }
+    };
 
-const imageArr = [
-    'img/fender-strat1.jpg',
-    'img/fender-strat2.jpg',
-]
+    slideRight = () => {
+        this.currentSlide++;
+        this.prevBtn.classList.remove("unactive");
+        this.slide.style.backgroundImage = this.images[this.currentSlide];
+        if (this.currentSlide === this.images.length - 1) {
+            this.nextBtn.classList.add("unactive");
+        }
+    };
+};
 
-const slider = new Slider(imageArr);
-slider.initializeSlider();
-slider.onclickSlide();
-console.log(document.getElementsByClassName("slide")); */
+/* Ibanez Prestige */
+
+const IbanezPrestige = [
+    "url('img/ibanez-prestige.jpg')",
+    "url('img/ibanez-prestige1.jpg')",
+    "url('img/ibanez-prestige2.jpg')",
+    "url('img/ibanez-prestige3.jpg')",
+    "url('img/ibanez-prestige4.jpg')",
+];
+
+const ibanez = new Slider(IbanezPrestige, "ibanez");
+ibanez.initializeSlider();
+
+/* Fender Strat USA */
+
+const FenderStratUSA = [
+    "url('img/fender-strat.jpg')",
+    "url('img/fender-strat1.jpg')",
+    "url('img/fender-strat2.jpg')",
+    "url('img/fender-strat3.jpg')",
+    "url('img/fender-strat4.jpg')",
+];
+
+const fenderStrat = new Slider(FenderStratUSA, "fender-strat");
+fenderStrat.initializeSlider();
+
+
 
 
 /* Slider -wersja 2 - gotowa */
 
 /* Ibanez Prestige */
 
-const IbanezPrestige = [
+/* const IbanezPrestige = [
     "url('img/ibanez-prestige.jpg')",
     "url('img/ibanez-prestige1.jpg')",
     "url('img/ibanez-prestige2.jpg')",
@@ -74,7 +104,7 @@ slideLeft = () => {
         prevBtn.classList.add("unactive");
     }};
 
-    slideRight = () => {
+slideRight = () => {
     i++;
     prevBtn.classList.remove("unactive");
     slide.style.backgroundImage = IbanezPrestige[i];
@@ -83,13 +113,13 @@ slideLeft = () => {
     }};
 
 prevBtn.addEventListener("click", slideLeft);
-nextBtn.addEventListener("click", slideRight);
+nextBtn.addEventListener("click", slideRight); */
 
 
 
 /* Fender Strat USA */
 
-const FenderStratUSA = [
+/* const FenderStratUSA = [
     "url('img/fender-strat.jpg')",
     "url('img/fender-strat1.jpg')",
     "url('img/fender-strat2.jpg')",
@@ -113,7 +143,7 @@ slideLeft = () => {
         prevBtnFenderStrat.classList.add("unactive");
     }};
 
-    slideRight = () => {
+slideRight = () => {
     i++;
     prevBtnFenderStrat.classList.remove("unactive");
     slideFenderStrat.style.backgroundImage = FenderStratUSA[i];
@@ -122,4 +152,4 @@ slideLeft = () => {
     }};
 
 prevBtnFenderStrat.addEventListener("click", slideLeft);
-nextBtnFenderStrat.addEventListener("click", slideRight);
+nextBtnFenderStrat.addEventListener("click", slideRight); */
