@@ -47,6 +47,7 @@ class Slider {
     };
 };
 
+/* GITARY ELEKTRYCZNE */
 /* Ibanez Prestige */
 
 const IbanezPrestige = [
@@ -56,7 +57,6 @@ const IbanezPrestige = [
     "url('img/ibanez-prestige3.jpg')",
     "url('img/ibanez-prestige4.jpg')",
 ];
-
 const ibanez = new Slider(IbanezPrestige, "ibanez");
 ibanez.initializeSlider();
 
@@ -69,10 +69,33 @@ const FenderStratUSA = [
     "url('img/fender-strat3.jpg')",
     "url('img/fender-strat4.jpg')",
 ];
-
 const fenderStrat = new Slider(FenderStratUSA, "fender-strat");
 fenderStrat.initializeSlider();
 
+/* Gibson SG Standard */
+
+const GibsonSt = [
+    "url('img/gibson-st.jpg')",
+    "url('img/gibson-st1.jpg')",
+    "url('img/gibson-st2.jpg')",
+    "url('img/gibson-st3.jpg')",
+    "url('img/gibson-st4.jpg')",
+];
+const gibsonSt = new Slider(GibsonSt, "gibson-st");
+gibsonSt.initializeSlider();
+
+
+/* GITARY BASOWE */
+/* MM Stingray 5 HH */
+
+const Mmhh = [
+    "url('img/MM-hh.jpg')",
+    "url('img/MM-hh1.jpg')",
+    "url('img/MM-hh2.jpg')",
+    "url('img/MM-hh3.jpg')",
+];
+const mmhh = new Slider(Mmhh, "mm-hh");
+mmhh.initializeSlider();
 
 
 
