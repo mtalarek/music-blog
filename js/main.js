@@ -17,10 +17,10 @@ class Slider {
         this.slide = document.getElementById(this.idSlide);
         this.prevBtn = document.getElementById(this.idPrevBtn);
         this.nextBtn = document.getElementById(this.idNextBtn);
-        
-        this.prevBtn.classList.add("unactive");
-        this.slide.style.backgroundImage = this.images[0];
-        this.onclickSlide(); 
+        if(this.slide != null) {this.slide.style.backgroundImage = this.images[0], 
+            this.prevBtn.classList.add("unactive"),
+            this.onclickSlide()
+        };
     }
 
     onclickSlide() {
@@ -51,11 +51,11 @@ class Slider {
 /* Ibanez Prestige */
 
 const IbanezPrestige = [
-    "url('img/ibanez-prestige.jpg')",
-    "url('img/ibanez-prestige1.jpg')",
-    "url('img/ibanez-prestige2.jpg')",
-    "url('img/ibanez-prestige3.jpg')",
-    "url('img/ibanez-prestige4.jpg')",
+    "url('img/guitar/ibanez-prestige/ibanez-prestige.jpg')",
+    "url('img/guitar/ibanez-prestige/ibanez-prestige1.jpg')",
+    "url('img/guitar/ibanez-prestige/ibanez-prestige2.jpg')",
+    "url('img/guitar/ibanez-prestige/ibanez-prestige3.jpg')",
+    "url('img/guitar/ibanez-prestige/ibanez-prestige4.jpg')",
 ];
 const ibanez = new Slider(IbanezPrestige, "ibanez");
 ibanez.initializeSlider();
@@ -63,11 +63,11 @@ ibanez.initializeSlider();
 /* Fender Strat USA */
 
 const FenderStratUSA = [
-    "url('img/fender-strat.jpg')",
-    "url('img/fender-strat1.jpg')",
-    "url('img/fender-strat2.jpg')",
-    "url('img/fender-strat3.jpg')",
-    "url('img/fender-strat4.jpg')",
+    "url('img/guitar/fender-strat/fender-strat.jpg')",
+    "url('img/guitar/fender-strat/fender-strat1.jpg')",
+    "url('img/guitar/fender-strat/fender-strat2.jpg')",
+    "url('img/guitar/fender-strat/fender-strat3.jpg')",
+    "url('img/guitar/fender-strat/fender-strat4.jpg')",
 ];
 const fenderStrat = new Slider(FenderStratUSA, "fender-strat");
 fenderStrat.initializeSlider();
@@ -75,11 +75,11 @@ fenderStrat.initializeSlider();
 /* Gibson SG Standard */
 
 const GibsonSt = [
-    "url('img/gibson-st.jpg')",
-    "url('img/gibson-st1.jpg')",
-    "url('img/gibson-st2.jpg')",
-    "url('img/gibson-st3.jpg')",
-    "url('img/gibson-st4.jpg')",
+    "url('img/guitar/gibson-st/gibson-st.jpg')",
+    "url('img/guitar/gibson-st/gibson-st1.jpg')",
+    "url('img/guitar/gibson-st/gibson-st2.jpg')",
+    "url('img/guitar/gibson-st/gibson-st3.jpg')",
+    "url('img/guitar/gibson-st/gibson-st4.jpg')",
 ];
 const gibsonSt = new Slider(GibsonSt, "gibson-st");
 gibsonSt.initializeSlider();
@@ -89,14 +89,24 @@ gibsonSt.initializeSlider();
 /* MM Stingray 5 HH */
 
 const Mmhh = [
-    "url('img/MM-hh.jpg')",
-    "url('img/MM-hh1.jpg')",
-    "url('img/MM-hh2.jpg')",
-    "url('img/MM-hh3.jpg')",
+    "url('img/bass/mm-hh/MM-hh.jpg')",
+    "url('img/bass/mm-hh/MM-hh1.jpg')",
+    "url('img/bass/mm-hh/MM-hh2.jpg')",
+    "url('img/bass/mm-hh/MM-hh3.jpg')",
 ];
 const mmhh = new Slider(Mmhh, "mm-hh");
 mmhh.initializeSlider();
 
+/* Fender JB Ultra */
+
+const fenderJBa = [
+    "url('img/bass/fender-jbactiv/FenderJBa.png')",
+    "url('img/bass/fender-jbactiv/FenderJBa1.png')",
+    "url('img/bass/fender-jbactiv/FenderJBa2.png')",
+    "url('img/bass/fender-jbactiv/FenderJBa3.png')",
+];
+const fenderjba = new Slider(fenderJBa, "fender-jba");
+fenderjba.initializeSlider();
 
 
 /* Slider -wersja 2 - gotowa */
@@ -104,11 +114,11 @@ mmhh.initializeSlider();
 /* Ibanez Prestige */
 
 /* const IbanezPrestige = [
-    "url('img/ibanez-prestige.jpg')",
-    "url('img/ibanez-prestige1.jpg')",
-    "url('img/ibanez-prestige2.jpg')",
-    "url('img/ibanez-prestige3.jpg')",
-    "url('img/ibanez-prestige4.jpg')",
+    "url('img/guitar/ibanez-prestige/ibanez-prestige.jpg')",
+    "url('img/guitar/ibanez-prestige/ibanez-prestige1.jpg')",
+    "url('img/guitar/ibanez-prestige/ibanez-prestige2.jpg')",
+    "url('img/guitar/ibanez-prestige/ibanez-prestige3.jpg')",
+    "url('img/guitar/ibanez-prestige/ibanez-prestige4.jpg')",
 ];
 
 let slide = document.getElementById("slider ibanez");      
@@ -143,11 +153,11 @@ nextBtn.addEventListener("click", slideRight); */
 /* Fender Strat USA */
 
 /* const FenderStratUSA = [
-    "url('img/fender-strat.jpg')",
-    "url('img/fender-strat1.jpg')",
-    "url('img/fender-strat2.jpg')",
-    "url('img/fender-strat3.jpg')",
-    "url('img/fender-strat4.jpg')",
+    "url('img/guitar/fender-strat/fender-strat.jpg')",
+    "url('img/guitar/fender-strat/fender-strat1.jpg')",
+    "url('img/guitar/fender-strat/fender-strat2.jpg')",
+    "url('img/guitar/fender-strat/fender-strat3.jpg')",
+    "url('img/guitar/fender-strat/fender-strat4.jpg')",
 ];
 
 let slideFenderStrat = document.getElementById("slider fender-strat");      
@@ -176,3 +186,15 @@ slideRight = () => {
 
 prevBtnFenderStrat.addEventListener("click", slideLeft);
 nextBtnFenderStrat.addEventListener("click", slideRight); */
+
+
+/* Najnowysz post */
+
+/* var log = [{date: '2016-01-16T05:23:38+00:00', other: 'sample'}, 
+            {date: '2016-01-13T05:23:38+00:00',other: 'sample'}, 
+            {date: '2016-01-15T11:23:38+00:00', other: 'sample'}];
+
+log.sort(function(a, b) {
+    return new Date(b.date) - new Date(a.date);
+}); */
+
